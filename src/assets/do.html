@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8 />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/three@0.126.1/examples/js/controls/OrbitControls.js"></script>
+    <script type="text/javascript">
+        let scene, camera, renderer;
+
+
+        function init() {
+
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0xdddddd);
+
+            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.x = 0;
+            camera.position.y = 0;
+            camera.position.z = 10;
+
+            const hlight = new THREE.AmbientLight(0x404040, 0.4);
+            scene.add(hlight);
+
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+            directionalLight.position.set(0, 10, 0);
+            scene.add(directionalLight);
+
+            renderer = new THREE.WebGLRenderer({
+                antialias: true
+            });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            const loader = new THREE.GLTFLoader();
+            loader.load('do.gltf', function(gltf) {
+
+                scene.add(gltf.scene);
+                animate();
+
+            });
+
+            const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        }
+
+        function animate() {
+
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

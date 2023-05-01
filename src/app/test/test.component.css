@@ -1,0 +1,23 @@
+#gui-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.gui-wrap > .main {
+    pointer-events: all;
+    max-height: 100%;
+    overflow: auto;
+  }
+
+#testRef {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}

@@ -1,0 +1,202 @@
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+<link rel="stylesheet" href="css/main.css">
+<h1>cool beans</h1>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script> -->
+
+<script src="Three.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+<script type = "module">
+
+    import {GLTFLoader} from '/GLTFLoader.js';
+
+    var scene = new THREE.Scene();
+
+    var meshX;
+
+    var camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight,0.1,1000);
+
+    camera.position.z = 10;
+
+    var renderer = new THREE.WebGLRenderer({antialias: true});
+
+    renderer.setClearColor("#e5e5e5");
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    document.body.appendChild(renderer.domElement);
+
+    // make renderer size and aspect ratio of camera responsive to browser size
+
+    window.addEventListener('resize', () => {
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+
+        camera.updateProjectionMatrix();
+
+    })
+
+    // Instantiate a loader
+
+    const loader = new GLTFLoader();    
+
+    // Load a glTF resource
+
+    loader.load(
+
+        // resource URL
+
+        '../../assets/scene.gltf',
+
+        // called when the resource is loaded
+
+        function ( gltf ) {
+
+            scene.add( gltf.scene );
+
+            gltf.animations; // Array<THREE.AnimationClip>
+
+            gltf.scene; // THREE.Group
+
+            gltf.scenes; // Array<THREE.Group>
+
+            gltf.cameras; // Array<THREE.Camera>
+
+            gltf.asset; // Object
+
+        },
+
+        // called while loading is progressing
+
+        function ( xhr ) {
+
+            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+        },
+
+        // called when loading has errors
+
+        function ( error ) {
+
+            console.log( 'An error happened' );
+
+        }
+
+    );
+
+    var raycaster = new THREE.Raycaster();
+
+    var mouse = new THREE.Vector2();
+
+    var geometry = new THREE.BoxGeometry(1, 1, 1); // x, y, z scale
+
+    var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7});
+
+    /* var mesh = new THREE.Mesh(geometry, material); */
+
+    /* mesh.position.set(2,2,-2); // x y z 
+
+    mesh.rotation.set(45,0,0);
+
+    mesh.scale.set(1,2,1); */
+
+    
+
+    /* scene.add(mesh); */
+
+    meshX = -10;
+
+    for(var i = 0; i < 15; i++){
+
+        var mesh = new THREE.Mesh(geometry, material);
+
+        mesh.position.x = (Math.random() - 0.5) * 10;
+
+        mesh.position.y = (Math.random() - 0.5) * 10;
+
+        mesh.position.z = (Math.random() - 0.5) * 10;
+
+        scene.add(mesh);
+
+        meshX += 1;
+
+    }
+
+    var light = new THREE.PointLight(0xFFFFFF, 1, 1000); //color , intensity, distance
+
+    light.position.set(0,0,0); // x , y , z
+
+    scene.add(light);
+
+    var light = new THREE.PointLight(0xFFFFFF, 2, 1000);
+
+    light.position.set(0,0,25); // x , y , z
+
+    scene.add(light);
+
+    var render = function(){
+
+        requestAnimationFrame(render); //to fix the scaling of object so that it doesnt become smaller on resize
+
+        renderer.render(scene,camera);
+
+    }
+
+    // when hovered/click over object (depends on event you are listening to)
+
+    function onMouseMove(event){
+
+        event.preventDefault();
+
+        mouse.x = (event.clientX / window.innerWidth ) * 2 - 1;
+
+        mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+        raycaster.setFromCamera(mouse, camera);
+
+        var intersects = raycaster.intersectObjects(scene.children, true);
+
+        for (var i = 0; i < intersects.length; i++){
+
+            this.tl = new TimelineMax();
+
+            this.tl.to(intersects[i].object.scale, 1, {x: 2, ease: Expo.easeOut}); // (reference mesh and scale, duration, scale on x axis and set ease)
+
+            this.tl.to(intersects[i].object.scale, 0.5, {x: 0.5, ease: Expo.easeOut});
+
+            this.tl.to(intersects[i].object.position, 0.5, {x: 2, ease: Expo.easeOut});
+
+            this.tl.to(intersects[i].object.rotation, 0.5, {y: Math.PI*0.5, ease: Expo.easeOut}, "=-1.5"); // happens 1.5 seconds before it normally would
+
+            /* intersects[i].object.material.color.set(0xff0000); */
+
+        }
+
+    }
+
+    render();
+
+    // this part is using the twinmax imported stuff (we imported it below the three.js part)
+
+           
+
+    window.addEventListener('mousemove',onMouseMove);
+
+    /* document.body.addEventListener('click', () => {
+
+        this.tl.play();
+
+    }) */
+
+</script>
