@@ -15,12 +15,12 @@ import { ModelDialogComponent } from './model-dialog/model-dialog.component';
     CubeComponent,
     ModelComponent,
     TestComponent,
-    ModelDialogComponent
+    ModelDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -7,7 +7,7 @@ import { ModelDialogComponent } from './model-dialog/model-dialog.component';
 
 const routes: Routes = [
   {
-    path:"", component:CubeComponent
+    path:"cube", component:CubeComponent
   },
   {
     path:"model", component:ModelComponent
