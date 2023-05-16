@@ -110,17 +110,17 @@ export class CubeComponent implements AfterViewInit {
     }());
   }
 
+  //creat a dialog with model inside it
+  //Known bug: can not control inside the dialog
   openDialog(){
     const DiaCon= new MatDialogConfig();
 
     DiaCon.panelClass= 'custom-modalbox';
     DiaCon.disableClose=false;
     DiaCon.autoFocus=true;
-    DiaCon.width='50vw';
-    DiaCon.height='50vh';
-    
 
     const diaRef=this.dialogRef=this.dialog.open(ModelDialogComponent,DiaCon);
+    
 
     //get element for the dialog
     let nElem= diaRef['_containerInstance']['_elementRef'].nativeElement;
@@ -128,8 +128,8 @@ export class CubeComponent implements AfterViewInit {
     nElem.style.position='absolute';
     nElem.style.height='50vh';
     nElem.style.width='50vw';
-    nElem.style.top='10px';
-    nElem.style.left='10px';
+    nElem.style.top='100px';
+    nElem.style.left='100px';
 
     diaRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

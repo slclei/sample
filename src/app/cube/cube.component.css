@@ -3,3 +3,9 @@
     height: 80%;
     width: 80%;
 }
+
+.mat-dialog-title .mat-icon {
+    top: 5px;
+    position: relative;
+    cursor: grab;
+}

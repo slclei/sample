@@ -134,10 +134,12 @@ export class TestComponent implements OnInit, AfterViewInit {
    */
   private createControls = () => {
     const renderer = new CSS2DRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.domElement.style.position = 'absolute';
+    //get testRef document
+    const testD=this.canvas
+    renderer.setSize(testD.clientWidth, testD.clientHeight);
+    renderer.domElement.style.position = 'relative';
     renderer.domElement.style.top = '0px';
-    document.body.appendChild(renderer.domElement);
+    testD.parentElement!.appendChild(renderer.domElement);
     this.controls = new OrbitControls(this.camera, renderer.domElement);
     this.controls.autoRotate = true;
     this.controls.enableZoom = true;
@@ -147,6 +149,7 @@ export class TestComponent implements OnInit, AfterViewInit {
   }
 
   private get canvas(): HTMLCanvasElement {
+    console.log(this.testRef.nativeElement,this.testRef.nativeElement.clientWidth);
     return this.testRef.nativeElement;
   }
 

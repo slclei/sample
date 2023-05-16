@@ -1,0 +1,3008 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-250db4db01a54359fda98f9822e0a4d806d5d718df6cd765e26c018a9a44e4e093a383614d60e3a59c53440f6aba7e2b7aa0e62d784d0263726c5c038a4738eb",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { MatDialog } from '@angular/material/dialog';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.css']\r\n})\r\nexport class AppComponent {\r\n  \r\n}\r\n\r\n\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.css"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<router-outlet></router-outlet>"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-a53fd738b978780d39fb5fcc9ae4cfe0088e57a1f6ce674862d57dab9192140bd1c05548a9910db0469a431142886e658ff2e761f15781b2ad430e58d64724d0",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 786,
+                            "end": 799,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 787,
+                                "end": 795,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 42,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 22,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 34,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 48,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule],\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 50
+                    }
+                }
+            }
+        },
+        {
+            "name": "CubeComponent",
+            "id": "component-CubeComponent-81c399c99afbdf0093ae708156a46e24fb8571ca7d2d9e5a440f434be6962e92d5b045d9972a2a0b7f0ea772fea1c88a30aa67956cb2032891c7de8d31ea65a9",
+            "file": "src/app/cube/cube.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-cube",
+            "styleUrls": [
+                "./cube.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./cube.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "cameraZ",
+                    "defaultValue": "400",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "farClipping",
+                    "defaultValue": "1000",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 35,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "fieldOfView",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 33,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "nearClipping",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 34,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "rotationSpeedX",
+                    "defaultValue": "0.05",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "rotationSpeedY",
+                    "defaultValue": "0.01",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "200",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "texture",
+                    "defaultValue": "\"/assets/texture.jpg\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "camera",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PerspectiveCamera",
+                    "optional": false,
+                    "description": "",
+                    "line": 38,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "canvasRef",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef | any",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'canvas'"
+                        }
+                    ],
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "cube",
+                    "defaultValue": "new THREE.Mesh(this.geometry,this.material)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Mesh",
+                    "optional": false,
+                    "description": "",
+                    "line": 49,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "dialogRef",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "geometry",
+                    "defaultValue": "new THREE.BoxGeometry(1,1,1)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 46,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "loader",
+                    "defaultValue": "new THREE.TextureLoader()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 44,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "material",
+                    "defaultValue": "new THREE.MeshBasicMaterial({map:this.loader.load(this.texture)})",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 47,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "renderer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.WebGLRenderer",
+                    "optional": false,
+                    "description": "",
+                    "line": 51,
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "scene",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Scene",
+                    "optional": false,
+                    "description": "",
+                    "line": 52,
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "animateCube",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 86,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nAnimate the cube\n\n",
+                    "description": "<p>Animate the cube</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 2458,
+                                "end": 2465,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "close",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 139,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "createScene",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCreate the scene\n\n",
+                    "description": "<p>Create the scene</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 1868,
+                                "end": 1875,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "getAspectRatio",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 76,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 143,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "openDialog",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 113,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "startRenderingLoop",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 97,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nSart the rendering loop\n\n",
+                    "description": "<p>Sart the rendering loop</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 2675,
+                                "end": 2682,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ThisReceiver } from '@angular/compiler';\nimport { AfterViewInit, Component, ElementRef, Input,OnInit,ViewChild } from '@angular/core';\nimport * as THREE from \"three\";\nimport { TestComponent } from '../test/test.component';\nimport {MatDialog, MatDialogConfig, MatDialogRef} from '@angular/material/dialog';\nimport { ModelDialogComponent } from '../model-dialog/model-dialog.component';\n\n@Component({\n  selector: 'app-cube',\n  templateUrl: './cube.component.html',\n  styleUrls: ['./cube.component.css']\n})\n\n//https://medium.com/geekculture/hello-cube-your-first-three-js-scene-in-angular-176c44b9c6c0\nexport class CubeComponent implements AfterViewInit {\n  dialogRef: any;\n\n  constructor(private dialog:MatDialog){}\n\n  @ViewChild('canvas')\n  private canvasRef:ElementRef|any;\n\n  //Cube properties\n  //rotation speed in x an y axis\n  @Input() public rotationSpeedX: number =0.05;\n  @Input() public rotationSpeedY: number =0.01;\n  @Input() public size: number =200;\n  @Input() public texture:string=\"/assets/texture.jpg\";\n\n  //Stage properties\n  //only items between the two clipping planes are rendered\n  @Input() public cameraZ: number=400;\n  @Input() public fieldOfView: number=1;\n  @Input('nearClipping') public nearClippingPlane: number=1;\n  @Input('farClipping') public farClippingPlane:number=1000; \n\n  //Helper properties\n  private camera!:THREE.PerspectiveCamera;\n\n  private get canvas(): HTMLCanvasElement{\n    return this.canvasRef.nativeElement;\n  }\n\n  private loader= new THREE.TextureLoader();\n  //geometry is a rendered shape\n  private geometry=new THREE.BoxGeometry(1,1,1);\n  private material=new THREE.MeshBasicMaterial({map:this.loader.load(this.texture)});\n\n  private cube:THREE.Mesh=new THREE.Mesh(this.geometry,this.material);\n\n  private renderer!: THREE.WebGLRenderer;\n  private scene!: THREE.Scene;\n\n  /** \n   * Create the scene\n   *\n   * @private\n   * @memberof CubeComponent\n   */ \n  private createScene(){\n    //*Scene\n    this.scene=new THREE.Scene();\n    this.scene.background=new THREE.Color(0x000000)\n    this.scene.add(this.cube);\n    //Camera\n    let aspectRatio=this.getAspectRatio();\n    this.camera=new THREE.PerspectiveCamera(\n      this.fieldOfView,\n      aspectRatio,\n      this.nearClippingPlane,\n      this.farClippingPlane\n    )\n    this.camera.position.z=this.cameraZ;\n  }\n\n  private getAspectRatio(){\n    return this.canvas.clientWidth / this.canvas.clientHeight;\n  }\n\n  /** \n   *Animate the cube \n   * \n   * @private\n   * @memberof CubeComponent\n  */\n  private animateCube(){\n    this.cube.rotation.x += this.rotationSpeedX;\n    this.cube.rotation.y += this.rotationSpeedY;\n  }\n\n  /**\n   *Sart the rendering loop\n   *  \n   * @private\n   * @memberof CubeComponent\n   */\n  private startRenderingLoop(){\n    //* Renderer\n    // Use canvas element in template\n    this.renderer=new THREE.WebGL1Renderer({canvas:this.canvas});\n    this.renderer.setPixelRatio(devicePixelRatio);\n    this.renderer.setSize(this.canvas.clientWidth,this.canvas.clientHeight);\n\n    let component: CubeComponent=this;\n\n    (function render(){\n      requestAnimationFrame(render);\n      component.animateCube();\n      component.renderer.render(component.scene,component.camera);\n    }());\n  }\n\n  openDialog(){\n    const DiaCon= new MatDialogConfig();\n\n    DiaCon.panelClass= 'custom-modalbox';\n    DiaCon.disableClose=false;\n    DiaCon.autoFocus=true;\n    DiaCon.width='50vw';\n    DiaCon.height='50vh';\n    \n\n    const diaRef=this.dialogRef=this.dialog.open(ModelDialogComponent,DiaCon);\n\n    //get element for the dialog\n    let nElem= diaRef['_containerInstance']['_elementRef'].nativeElement;\n    \n    nElem.style.position='absolute';\n    nElem.style.height='50vh';\n    nElem.style.width='50vw';\n    nElem.style.top='10px';\n    nElem.style.left='10px';\n\n    diaRef.afterClosed().subscribe(result => {\n      console.log('The dialog was closed');\n    });\n  }\n\n  close() {\n    this.dialogRef.close();\n}\n\n  ngAfterViewInit(): void {\n    this.createScene();\n    this.startRenderingLoop();\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "#canvas\r\n{\r\n    height: 80%;\r\n    width: 80%;\r\n}\r\n",
+                    "styleUrl": "./cube.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 16,
+                "jsdoctags": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "AfterViewInit"
+            ],
+            "accessors": {
+                "canvas": {
+                    "name": "canvas",
+                    "getSignature": {
+                        "name": "canvas",
+                        "type": "",
+                        "returnType": "HTMLCanvasElement",
+                        "line": 40
+                    }
+                }
+            },
+            "templateData": "<canvas #canvas id=\"canvas\" ></canvas>\r\n<button id=\"openDialog\" (click)=\"openDialog()\">openDialog</button>"
+        },
+        {
+            "name": "ExampleComponent",
+            "id": "component-ExampleComponent-15e5cc2fd92893770e800c03e9989415851cce92a645bfa38a9336887a3f1c694099ccfff6daa0a57d1710fb8f7059cab7dbaab25af5e11222a51dd66a94b86c",
+            "file": "src/app/example/example.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-example",
+            "styleUrls": [
+                "./example.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./example.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onClose",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 9,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-example',\n  templateUrl: './example.component.html',\n  styleUrls: ['./example.component.css']\n})\nexport class ExampleComponent {\n  onClose(){}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\r\n    border: 2px #382ecc solid;\r\n    font-size: 64px;\r\n    color: #382ecc;\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex: 1;\r\n}\r\n\r\n.text-wrapper {\r\n    display: flex;\r\n    flex: 1;\r\n    align-content: center;\r\n    justify-content: center;\r\n    text-align: center;\r\n}\r\n\r\n.actions {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: flex-end;\r\n}",
+                    "styleUrl": "./example.component.css"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"text-wrapper\">\n    <p>Test</p>\n</div>\n<div class=\"actions\">\n    <button class=\"button\" (click)=\"onClose()\">CANCEL</button>\n    <button class=\"button\" (click)=\"onClose()\">OK</button>\n</div>"
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-3d494fd89671305c6be07de00e019efdf08f2e36c2169e5fb75a5acdb2841da927e3ef3cbd21cc18f478373a784b1fb90e8b63b9df4b3498a75b652bd9c37b38",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-header {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "ModelComponent",
+            "id": "component-ModelComponent-4b2fc1e47171023c637be3a1877395ff2efa2f2fc7feb48360652188cc55cbaee34990d97fd89befe3587ec101fdbe465fc659eb7e46e419920552674a5f4bb0",
+            "file": "src/app/model/model.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-model",
+            "styleUrls": [
+                "./model.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./model.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "ambientLight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.AmbientLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "camera",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PerspectiveCamera",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "controls",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "OrbitControls",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                },
+                {
+                    "name": "createControls",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "<p>create controls</p>\n",
+                    "line": 99,
+                    "rawdescription": "\n\ncreate controls\n\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "pos": 3164,
+                            "end": 3178,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 332,
+                            "tagName": {
+                                "pos": 3165,
+                                "end": 3172,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        },
+                        {
+                            "pos": 3178,
+                            "end": 3206,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 3179,
+                                "end": 3187,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "memberof"
+                            },
+                            "comment": "<p>ModelComponent</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "directionalLight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.DirectionalLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "farClippingPane",
+                    "defaultValue": "1000",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "fieldOfView",
+                    "defaultValue": "0.5",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "light1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "light2",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "light3",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                },
+                {
+                    "name": "light4",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "loaderGLTF",
+                    "defaultValue": "new GLTFLoader()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "model",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Object3D<THREE.Event>",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "modelRef",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef | any",
+                    "optional": false,
+                    "description": "",
+                    "line": 37,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'modelRef'"
+                        }
+                    ],
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "nearClippingPane",
+                    "defaultValue": "0.01",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "renderer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.WebGLRenderer",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "robot",
+                    "defaultValue": "'assets/robot/scene.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 39
+                },
+                {
+                    "name": "scene",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Scene",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "test",
+                    "defaultValue": "'assets/test.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 38
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "animateModel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 148,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nAnimate the model\n\n",
+                    "description": "<p>Animate the model</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 4569,
+                                "end": 4576,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "createScene",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCreate the scene\n\n @private\n @memeberof ModelComponent\n",
+                    "description": "<p>Create the scene</p>\n<p> @private\n @memeberof ModelComponent</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 1354,
+                                "end": 1361,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "getAspectRatio",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 117,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "startRenderingLoop",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 127,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nStart the rendering loop\n\n",
+                    "description": "<p>Start the rendering loop</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 3920,
+                                "end": 3927,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';\nimport {GLTFLoader,GLTF} from 'three/examples/jsm/loaders/GLTFLoader.js';\nimport * as THREE from 'three';\nimport {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';\nimport {CSS2DRenderer} from 'three/examples/jsm/renderers/CSS2DRenderer';\n\n@Component({\n  selector: 'app-model',\n  templateUrl: './model.component.html',\n  styleUrls: ['./model.component.css']\n})\nexport class ModelComponent implements OnInit, AfterViewInit{\n  scene!: THREE.Scene;\n  loaderGLTF: any=new GLTFLoader();\n  model!: THREE.Object3D<THREE.Event>;\n  camera!: THREE.PerspectiveCamera;\n  fieldOfView: number | undefined=0.5;\n  nearClippingPane: number | undefined=0.01;\n  farClippingPane: number | undefined=1000;\n  ambientLight!: THREE.AmbientLight;\n  controls!: OrbitControls;\n  renderer!: THREE.WebGLRenderer;\n  directionalLight!: THREE.DirectionalLight;\n  light1!: THREE.PointLight;\n  light2!: THREE.PointLight;\n  light3!: THREE.PointLight;\n  light4!: THREE.PointLight;\n\n  ngOnInit(): void {\n  }\n  ngAfterViewInit(): void {\n    this.createScene();\n    this.startRenderingLoop();\n    this.createControls();\n  }\n  \n  @ViewChild('modelRef') private modelRef:ElementRef | any;\n  test='assets/test.gltf';\n  robot='assets/robot/scene.gltf'\n\n  /**\n   * Create the scene\n   * \n   *  @private\n   *  @memeberof ModelComponent\n   */\n  private createScene(){\n    //* Scene\n    this.scene=new THREE.Scene();\n    this.scene.background=new THREE.Color(0xd4d4d8);\n    this.loaderGLTF.load(this.robot,(gltf:GLTF)=>{\n      this.model=gltf.scene.children[0];\n      console.log(this.model);\n      let box=new THREE.Box3().setFromObject(this.model);\n      box.getCenter(this.model.position);\n      this.model.position.multiplyScalar(-1);\n      this.model.scale.set(1,1,1);\n      this.scene.add(this.model);\n      this.scene.add(new THREE.AxesHelper(10));\n    });\n    //*Camera\n    let aspectRatio:any=this.getAspectRatio();\n    this.camera=new THREE.PerspectiveCamera(\n      this.fieldOfView,\n      aspectRatio,\n      this.nearClippingPane,\n      this.farClippingPane\n    );\n\n    this.camera.position.set(50,50,50); // Set position like this\n    this.camera.lookAt(new THREE.Vector3(0,0,0)); // Set look at coordinate like this\n\n    this.ambientLight=new THREE.AmbientLight(0x000000,100);\n    this.scene.add(this.ambientLight);    \n    this.directionalLight = new THREE.DirectionalLight(0xffdf04, 0.4);\n    this.directionalLight.position.set(0, 1, 0);\n    this.directionalLight.castShadow = true;\n    this.scene.add(this.directionalLight);\n    this.light1 = new THREE.PointLight(0x4b371c, 10);\n    this.light1.position.set(0, 200, 400);\n    this.scene.add(this.light1);\n    this.light2 = new THREE.PointLight(0x4b371c, 10);\n    this.light2.position.set(500, 100, 0);\n    this.scene.add(this.light2);\n    this.light3 = new THREE.PointLight(0x4b371c, 10);\n    this.light3.position.set(0, 100, -500);\n    this.scene.add(this.light3);\n    this.light4 = new THREE.PointLight(0x4b371c, 10);\n    this.light4.position.set(-500, 300, 500);\n    this.scene.add(this.light4);\n  }\n\n  /**\n   * create controls\n   * \n   * @private\n   * @memberof ModelComponent\n   */\n  private createControls=()=>{\n    const renderer=new CSS2DRenderer();\n    renderer.setSize(window.innerWidth,window.innerHeight);\n    renderer.domElement.style.position='absolute';\n    renderer.domElement.style.top='0px';\n    document.body.appendChild(renderer.domElement);\n    this.controls=new OrbitControls(this.camera,renderer.domElement);\n    this.controls.autoRotate=true;\n    this.controls.enableZoom=true;\n    this.controls.enablePan=false;\n    this.controls.update();\n\n  }\n\n  private get canvas(): HTMLCanvasElement {\n    return this.modelRef.nativeElement;\n  }\n\n  private getAspectRatio() {\n    return this.canvas.clientWidth / this.canvas.clientHeight;\n  }\n\n  /**\n * Start the rendering loop\n *\n * @private\n * @memberof CubeComponent\n */\n  private startRenderingLoop() {\n    //* Renderer\n    // Use canvas element in template\n    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true });\n    this.renderer.setPixelRatio(devicePixelRatio);\n    this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);\n    let component: ModelComponent = this;\n    (function render() {\n      component.renderer.render(component.scene, component.camera);\n      //component.animateModel();\n      requestAnimationFrame(render);\n      console.log(\"render\",component.model);\n    }());\n  }\n\n   /**\n   *Animate the model\n   *\n   * @private\n   * @memberof ModelComponent\n   */\n   private animateModel() {\n    if (this.model) {\n      this.model.rotation.z += 0.005;\n    }\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "#canvas\r\n{\r\n    height: 100%;\r\n    width: 100%;\r\n}",
+                    "styleUrl": "./model.component.css"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit",
+                "AfterViewInit"
+            ],
+            "accessors": {
+                "canvas": {
+                    "name": "canvas",
+                    "getSignature": {
+                        "name": "canvas",
+                        "type": "",
+                        "returnType": "HTMLCanvasElement",
+                        "line": 113
+                    }
+                }
+            },
+            "templateData": "<canvas #modelRef id=\"modelRef\" style=\"height: 100vh; width: 100vw;\"></canvas>\n"
+        },
+        {
+            "name": "ModelDialogComponent",
+            "id": "component-ModelDialogComponent-2321678a351dd50b1f2743cfb6249c858c2b117518276b6b5f0a3acbd3ff7de3e9b1eb5842d215151735f36406b30a522222187355774bd61e32e2dfa294954c",
+            "file": "src/app/model-dialog/model-dialog.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-model-dialog",
+            "styleUrls": [
+                "./model-dialog.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./model-dialog.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "close",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "save",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Inject, OnInit } from '@angular/core';\nimport { FormGroup, FormBuilder } from '@angular/forms';\nimport { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';\n\n@Component({\n  selector: 'app-model-dialog',\n  templateUrl: './model-dialog.component.html',\n  styleUrls: ['./model-dialog.component.css']\n})\nexport class ModelDialogComponent implements OnInit{\n\n    constructor(\n        private fb: FormBuilder,\n        private dialogRef: MatDialogRef<ModelDialogComponent>,\n        @Inject(MAT_DIALOG_DATA) data:any) {\n    }\n\n    ngOnInit() {\n    }\n\n    save() {\n        this.dialogRef.close();\n    }\n\n    close() {\n        this.dialogRef.close();\n    }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".app-test {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\r\n    height: 50vh;\r\n    width: 50vw;\r\n}\r\n\r\n#canvas-P {\r\n    position: absolute;\r\n    height: 50vh;\r\n    width: 50vw;\r\n    top: 10px;\r\n    right: 10px;\r\n    display: block;\r\n}\r\n\r\n.button {\r\n    position: absolute;\r\n    z-index: 9;\r\n}",
+                    "styleUrl": "./model-dialog.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "dialogRef",
+                        "type": "MatDialogRef<ModelDialogComponent>",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "dialogRef",
+                        "type": "MatDialogRef<ModelDialogComponent>",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div mat-dialog-content id=\"canvas-P\">\r\n    <app-test class=\"app-test\"></app-test>\r\n    <button class=\"button\" (click)=\"close()\">OK</button>\r\n</div>"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-badb6d8cee577661da79ba82ad8f599604afd40fa34e36c7b88d71d77a4fbc7184228cba2f0d73e255d0b7bc51c4c7a8e7b0128b3624aeb0255abab9030fa59a",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 74,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-page {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\n.storybook-page h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\n.storybook-page ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.storybook-page .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "TestComponent",
+            "id": "component-TestComponent-3637e91d3aebc5f1208150fd7526c32bdeb278511394460b473c56d0d2dc7908879516004a624234c7885b747033abde63e155f1ae46e98dc94615f12c5fab6b",
+            "file": "src/app/test/working.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-test",
+            "styleUrls": [
+                "./test.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./test.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "ambientLight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.AmbientLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "camera",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PerspectiveCamera",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "controls",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "OrbitControls",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "createControls",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "<p>create controls</p>\n",
+                    "line": 111,
+                    "rawdescription": "\n\ncreate controls\n\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "pos": 3456,
+                            "end": 3470,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 332,
+                            "tagName": {
+                                "pos": 3457,
+                                "end": 3464,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        },
+                        {
+                            "pos": 3470,
+                            "end": 3497,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 3471,
+                                "end": 3479,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "memberof"
+                            },
+                            "comment": "<p>testComponent</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "directionalLight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.DirectionalLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "do",
+                    "defaultValue": "'assets/do.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 43
+                },
+                {
+                    "name": "ele",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                },
+                {
+                    "name": "farClippingPane",
+                    "defaultValue": "10000",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                },
+                {
+                    "name": "fieldOfView",
+                    "defaultValue": "30",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "light1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                },
+                {
+                    "name": "light2",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "light3",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 28
+                },
+                {
+                    "name": "light4",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                },
+                {
+                    "name": "loaderGLTF",
+                    "defaultValue": "new GLTFLoader()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "nearClippingPane",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "renderer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.WebGLRenderer",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "robot",
+                    "defaultValue": "'assets/robot/scene.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 42
+                },
+                {
+                    "name": "scene",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Scene",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "test",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Object3D<THREE.Event>",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "test1",
+                    "defaultValue": "'assets/test.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 41
+                },
+                {
+                    "name": "testRef",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef | any",
+                    "optional": false,
+                    "description": "",
+                    "line": 40,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'testRef'"
+                        }
+                    ],
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "animatetest",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 180,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nAnimate the test\n\n",
+                    "description": "<p>Animate the test</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 5400,
+                                "end": 5407,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "createScene",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 51,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCreate the scene\n\n @private\n @memeberof testComponent\n",
+                    "description": "<p>Create the scene</p>\n<p> @private\n @memeberof testComponent</p>\n",
+                    "modifierKind": [
+                        131
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 1421,
+                                "end": 1428,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "getAspectRatio",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 129,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Promise<void>",
+                    "typeParameters": [],
+                    "line": 34,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        131
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "startRenderingLoop",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 139,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nStart the rendering loop\n\n",
+                    "description": "<p>Start the rendering loop</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 4197,
+                                "end": 4204,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "waitForElm",
+                    "args": [
+                        {
+                            "name": "selector",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 154,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "selector",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';\nimport {GLTFLoader,GLTF} from 'three/examples/jsm/loaders/GLTFLoader.js';\nimport * as THREE from 'three';\nimport {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';\nimport {CSS2DRenderer} from 'three/examples/jsm/renderers/CSS2DRenderer';\n\n@Component({\n  selector: 'app-test',\n  templateUrl: './test.component.html',\n  styleUrls: ['./test.component.css']\n})\n\n//04212023 working\nexport class TestComponent implements OnInit, AfterViewInit{\n  scene!: THREE.Scene;\n  loaderGLTF: any=new GLTFLoader();\n  test!: THREE.Object3D<THREE.Event>;\n  camera!: THREE.PerspectiveCamera;\n  fieldOfView: number | undefined=30;\n  nearClippingPane: number | undefined=1;\n  farClippingPane: number | undefined=10000;\n  ambientLight!: THREE.AmbientLight;\n  controls!: OrbitControls;\n  renderer!: THREE.WebGLRenderer;\n  directionalLight!: THREE.DirectionalLight;\n  light1!: THREE.PointLight;\n  light2!: THREE.PointLight;\n  light3!: THREE.PointLight;\n  light4!: THREE.PointLight;\n  ele:any;\n\n  ngOnInit(): void {\n  }\n  async ngAfterViewInit(): Promise<void> {\n    await this.createScene();\n    this.startRenderingLoop();\n    this.createControls();\n  }\n  \n  @ViewChild('testRef') private testRef:ElementRef | any;\n  test1='assets/test.gltf';\n  robot='assets/robot/scene.gltf';\n  do='assets/do.gltf';\n\n  /**\n   * Create the scene\n   * \n   *  @private\n   *  @memeberof testComponent\n   */\n  async createScene(){\n    //* Scene\n    this.scene=new THREE.Scene();\n    this.scene.background=new THREE.Color(0xd4d4d8);\n    this.loaderGLTF.load(this.test1,(gltf:GLTF)=>{\n      this.test=gltf.scene.children[0];\n      console.log(this.test);\n      //let box=new THREE.Box3().setFromObject(this.test);\n      //box.getCenter(this.test.position);\n      var helper = new THREE.BoxHelper(this.test, 0xff0000);\n      helper.update();\n      this.test.position.multiplyScalar(-1);\n      //this.test.position.set(0,0,0)\n      this.test.scale.set(0.01,0.01,0.01);\n      this.scene.add(gltf.scene.children[0]);\n      this.scene.add(new THREE.AxesHelper(100));\n      //this.scene.add(helper);\n      \n    });\n    //*Camera\n    let aspectRatio:any=this.getAspectRatio();\n    this.camera=new THREE.PerspectiveCamera(\n      this.fieldOfView,\n      aspectRatio,\n      this.nearClippingPane,\n      this.farClippingPane\n    );\n\n    this.camera.position.set(1000,1000,10000); // Set position like this\n    //this.camera.lookAt(new THREE.Vector3(0,0,0)); // Set look at coordinate like this\n\n    this.camera.position.z = -5\n    \n\n    this.ambientLight=new THREE.AmbientLight(0x000000,100);\n    this.scene.add(this.ambientLight);    \n    this.directionalLight = new THREE.DirectionalLight(0xffdf04, 0.4);\n    this.directionalLight.position.set(0, 1, 0);\n    this.directionalLight.castShadow = true;\n    this.scene.add(this.directionalLight);\n    this.light1 = new THREE.PointLight(0x4b371c, 10);\n    this.light1.position.set(0, 200, 400);\n    this.scene.add(this.light1);\n    this.light2 = new THREE.PointLight(0x4b371c, 10);\n    this.light2.position.set(500, 100, 0);\n    this.scene.add(this.light2);\n    this.light3 = new THREE.PointLight(0x4b371c, 10);\n    this.light3.position.set(0, 100, -500);\n    this.scene.add(this.light3);\n    this.light4 = new THREE.PointLight(0x4b371c, 10);\n    this.light4.position.set(-500, 300, 500);\n    this.scene.add(this.light4);\n  }\n\n  /**\n   * create controls\n   * \n   * @private\n   * @memberof testComponent\n   */\n  private createControls=()=>{\n    const renderer=new CSS2DRenderer();\n    renderer.setSize(window.innerWidth,window.innerHeight);\n    renderer.domElement.style.position='absolute';\n    renderer.domElement.style.top='0px';\n    document.body.appendChild(renderer.domElement);\n    this.controls=new OrbitControls(this.camera,renderer.domElement);\n    this.controls.autoRotate=true;\n    this.controls.enableZoom=true;\n    this.controls.enablePan=false;\n    this.controls.update();\n\n  }\n\n  private get canvas(): HTMLCanvasElement {\n    return this.testRef.nativeElement;\n  }\n\n  private getAspectRatio() {\n    return window.innerWidth /window.innerHeight;\n  }\n\n  /**\n * Start the rendering loop\n *\n * @private\n * @memberof testComponent\n */\n  private startRenderingLoop() {\n    //* Renderer\n    // Use canvas element in template\n    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true });\n    this.renderer.setPixelRatio(devicePixelRatio);\n    this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);\n    let component: TestComponent = this;\n    (function render(this:any) {\n      component.renderer.render(component.scene, component.camera);\n      component.animatetest();\n      requestAnimationFrame(render);\n      console.log(\"render\",component.test);\n    }());\n  }\n\n  private waitForElm(selector:any) {\n    return new Promise(resolve => {\n        if (document.querySelector(selector)) {\n            return resolve(document.querySelector(selector));\n        }\n\n        const observer = new MutationObserver(mutations => {\n            if (document.querySelector(selector)) {\n                resolve(document.querySelector(selector));\n                observer.disconnect();\n            }\n        });\n\n        observer.observe(document.body, {\n            childList: true,\n            subtree: true\n        });\n    });\n}\n\n   /**\n   *Animate the test\n   *\n   * @private\n   * @memberof testComponent\n   */\n   private animatetest() {\n    if (this.test) {\n      this.test.rotation.z += 0.005;\n    }\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "#gui-wrap {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    z-index: 1;\r\n}\r\n\r\n.gui-wrap > .main {\r\n    pointer-events: all;\r\n    max-height: 100%;\r\n    overflow: auto;\r\n  }\r\n\r\n#testRef {\r\n    width: 100%;\r\n    height: 100%;\r\n    flex-grow: 1;\r\n    flex-shrink: 1;\r\n    position: absolute;\r\n    top: 0;\r\n    z-index: 0;\r\n}",
+                    "styleUrl": "./test.component.css"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit",
+                "AfterViewInit"
+            ],
+            "accessors": {
+                "canvas": {
+                    "name": "canvas",
+                    "getSignature": {
+                        "name": "canvas",
+                        "type": "",
+                        "returnType": "HTMLCanvasElement",
+                        "line": 125
+                    }
+                }
+            },
+            "templateData": "<div>\n    <div id=\"gui-wrap\" calss=\"gui-wrap\"></div>\n    <canvas #testRef id=\"testRef\"></canvas>\n</div>"
+        },
+        {
+            "name": "TestComponent",
+            "id": "component-TestComponent-23159f679abc49ccfc23beae83611e84246c16dae1cb6d2f80d040d09feb79a061f4d845477b4c5210fb666671332dda5eb2f8c526f8dd45d994876812be8641-1",
+            "file": "src/app/test/test.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-test",
+            "styleUrls": [
+                "./test.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./test.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "ambientLight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.AmbientLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "camera",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PerspectiveCamera",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "controls",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "OrbitControls",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "cp",
+                    "defaultValue": "document.getElementById(\"canvas-P\")",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 37
+                },
+                {
+                    "name": "createControls",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "<p>create controls</p>\n",
+                    "line": 135,
+                    "rawdescription": "\n\ncreate controls\n\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "pos": 4178,
+                            "end": 4192,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 332,
+                            "tagName": {
+                                "pos": 4179,
+                                "end": 4186,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        },
+                        {
+                            "pos": 4192,
+                            "end": 4219,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 4193,
+                                "end": 4201,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "memberof"
+                            },
+                            "comment": "<p>testComponent</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "directionalLight",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.DirectionalLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "directionalLight2",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.DirectionalLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 35
+                },
+                {
+                    "name": "do",
+                    "defaultValue": "'assets/do.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 51
+                },
+                {
+                    "name": "ele",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 34
+                },
+                {
+                    "name": "farClippingPane",
+                    "defaultValue": "10000",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "fieldOfView",
+                    "defaultValue": "30",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                },
+                {
+                    "name": "gui",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 36
+                },
+                {
+                    "name": "light1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 28
+                },
+                {
+                    "name": "light2",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                },
+                {
+                    "name": "light3",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                },
+                {
+                    "name": "light4",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.PointLight",
+                    "optional": false,
+                    "description": "",
+                    "line": 31
+                },
+                {
+                    "name": "light5",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 32
+                },
+                {
+                    "name": "light6",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 33
+                },
+                {
+                    "name": "loaderGLTF",
+                    "defaultValue": "new GLTFLoader()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "nearClippingPane",
+                    "defaultValue": "1",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "renderer",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.WebGLRenderer",
+                    "optional": false,
+                    "description": "",
+                    "line": 26
+                },
+                {
+                    "name": "robot",
+                    "defaultValue": "'assets/robot/scene.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 50
+                },
+                {
+                    "name": "scene",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Scene",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "test",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "THREE.Object3D<THREE.Event>",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "test1",
+                    "defaultValue": "'assets/test.gltf'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 49
+                },
+                {
+                    "name": "testRef",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef | any",
+                    "optional": false,
+                    "description": "",
+                    "line": 48,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'testRef'"
+                        }
+                    ],
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "addGUI",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 213,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "animatetest",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 206,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nAnimate the test\n\n",
+                    "description": "<p>Animate the test</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 6227,
+                                "end": 6234,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "createScene",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 59,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nCreate the scene\n\n @private\n @memeberof testComponent\n",
+                    "description": "<p>Create the scene</p>\n<p> @private\n @memeberof testComponent</p>\n",
+                    "modifierKind": [
+                        131
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 1666,
+                                "end": 1673,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "getAspectRatio",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 153,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                },
+                {
+                    "name": "ngAfterViewInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Promise<void>",
+                    "typeParameters": [],
+                    "line": 41,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        131
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "startRenderingLoop",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 163,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nStart the rendering loop\n\n",
+                    "description": "<p>Start the rendering loop</p>\n",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 4940,
+                                "end": 4947,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "originalKeywordKind": 121,
+                                "escapedText": "private"
+                            },
+                            "comment": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "waitForElm",
+                    "args": [
+                        {
+                            "name": "selector",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 180,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "selector",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';\nimport { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';\nimport * as THREE from 'three';\nimport { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';\nimport { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer';\nimport { GUI } from 'dat.gui';\nimport { state } from '@angular/animations';\n\n@Component({\n  selector: 'app-test',\n  templateUrl: './test.component.html',\n  styleUrls: ['./test.component.css']\n})\n\n//04212023 working\nexport class TestComponent implements OnInit, AfterViewInit {\n  scene!: THREE.Scene;\n  loaderGLTF: any = new GLTFLoader();\n  test!: THREE.Object3D<THREE.Event>;\n  camera!: THREE.PerspectiveCamera;\n  fieldOfView: number | undefined = 30;\n  nearClippingPane: number | undefined = 1;\n  farClippingPane: number | undefined = 10000;\n  ambientLight!: THREE.AmbientLight;\n  controls!: OrbitControls;\n  renderer!: THREE.WebGLRenderer;\n  directionalLight!: THREE.DirectionalLight;\n  light1!: THREE.PointLight;\n  light2!: THREE.PointLight;\n  light3!: THREE.PointLight;\n  light4!: THREE.PointLight;\n  light5!:any;\n  light6:any;\n  ele: any;\n  directionalLight2!: THREE.DirectionalLight;\n  gui:any;\n  cp=document.getElementById(\"canvas-P\");\n\n  ngOnInit(): void {\n  }\n  async ngAfterViewInit(): Promise<void> {\n    await this.createScene();\n    this.startRenderingLoop();\n    this.createControls();\n    this.addGUI();\n  }\n\n  @ViewChild('testRef') private testRef: ElementRef | any;\n  test1 = 'assets/test.gltf';\n  robot = 'assets/robot/scene.gltf';\n  do = 'assets/do.gltf';\n\n  /**\n   * Create the scene\n   * \n   *  @private\n   *  @memeberof testComponent\n   */\n  async createScene() {\n    //* Scene\n    this.scene = new THREE.Scene();\n    this.scene.background = new THREE.Color(0xd4d4d8);\n    this.loaderGLTF.load(this.test1, (gltf: GLTF) => {\n      this.test = gltf.scene.children[0];\n      //let box=new THREE.Box3().setFromObject(this.test);\n      //box.getCenter(this.test.position);\n      var helper = new THREE.BoxHelper(this.test, 0xff0000);\n      helper.update();\n      this.test.position.multiplyScalar(-1);\n      this.test.position.set(-300, -0,-300)\n      this.test.scale.set(0.02, 0.02, 0.02);\n      this.scene.add(gltf.scene.children[0]);\n      this.scene.add(new THREE.AxesHelper(400));\n      this.scene.add(helper);\n\n    });\n    //*Camera\n    let aspectRatio: any = this.getAspectRatio();\n    this.camera = new THREE.PerspectiveCamera(\n      this.fieldOfView,\n      aspectRatio,\n      this.nearClippingPane,\n      this.farClippingPane\n    );\n\n    this.camera.position.set(500, 500, 500); // Set position like this\n    this.camera.lookAt(new THREE.Vector3(0, 0, 0)); // Set look at coordinate like this\n\n    //this.camera.position.z = -5\n\n\n    this.ambientLight = new THREE.AmbientLight(0xffffff, 0.1);\n    this.ambientLight.name=\"Ambient Light\";\n    this.scene.add(this.ambientLight);\n\n\n\n    this.directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);\n    this.directionalLight.position.set(0, 4, 0);\n    this.directionalLight.castShadow = true;\n    this.scene.add(this.directionalLight);\n\n    this.directionalLight2 = new THREE.DirectionalLight(0xffdf04, 4);\n    this.directionalLight2.position.set(0, -4, 0);\n    this.directionalLight2.castShadow = true;\n    this.scene.add(this.directionalLight2);\n\n    this.light1 = new THREE.PointLight(0x4b371c, 5);\n    this.light1.position.set(0, 400, 400);\n    this.scene.add(this.light1);\n    this.light2 = new THREE.PointLight(0x4b371c, 5);\n    this.light2.position.set(500, 400, 0);\n    this.scene.add(this.light2);\n    this.light3 = new THREE.PointLight(0x4b371c, 5);\n    this.light3.position.set(0, 400, -500);\n    this.scene.add(this.light3);\n    this.light4 = new THREE.PointLight(0x4b371c, 5);\n    this.light4.position.set(-500, 500, 500);\n    this.scene.add(this.light4);\n\n    this.light5  = new THREE.AmbientLight(0x4b371c, 5);\n    this.scene.add( this.light5 );\n\n    this.light6  = new THREE.DirectionalLight(0x4b371c, 5);\n    this.light6.position.set(0.5, 0, 0.866); // ~60º\n    this.scene.add( this.light6);\n  }\n\n  /**\n   * create controls\n   * \n   * @private\n   * @memberof testComponent\n   */\n  private createControls = () => {\n    const renderer = new CSS2DRenderer();\n    renderer.setSize(window.innerWidth, window.innerHeight);\n    renderer.domElement.style.position = 'absolute';\n    renderer.domElement.style.top = '0px';\n    document.body.appendChild(renderer.domElement);\n    this.controls = new OrbitControls(this.camera, renderer.domElement);\n    this.controls.autoRotate = true;\n    this.controls.enableZoom = true;\n    this.controls.enablePan = false;\n    this.controls.update();\n\n  }\n\n  private get canvas(): HTMLCanvasElement {\n    return this.testRef.nativeElement;\n  }\n\n  private getAspectRatio() {\n    return window.innerWidth / window.innerHeight;\n  }\n\n  /**\n * Start the rendering loop\n *\n * @private\n * @memberof testComponent\n */\n  private startRenderingLoop() {\n    //* Renderer\n    // Use canvas element in template\n    this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true });\n    this.renderer.setPixelRatio(devicePixelRatio);\n    this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);\n    let component: TestComponent = this;\n    (function render(this: any) {\n      component.renderer.render(component.scene, component.camera);\n      //component.animatetest();\n      requestAnimationFrame(render);\n      component.renderer.toneMapping = THREE.LinearToneMapping;\n      component.renderer.toneMappingExposure = Math.pow(2, -1.41);\n    }());\n  }\n\n  //function to wait for some selector\n  private waitForElm(selector: any) {\n    return new Promise(resolve => {\n      if (document.querySelector(selector)) {\n        return resolve(document.querySelector(selector));\n      }\n\n      const observer = new MutationObserver(mutations => {\n        if (document.querySelector(selector)) {\n          resolve(document.querySelector(selector));\n          observer.disconnect();\n        }\n      });\n\n      observer.observe(document.body, {\n        childList: true,\n        subtree: true\n      });\n    });\n  }\n\n  /**\n  *Animate the test\n  *\n  * @private\n  * @memberof testComponent\n  */\n  private animatetest() {\n    if (this.test) {\n      this.test.rotation.z += 0.005;\n    }\n  }\n\n  //add dat gui to the scene\n  private addGUI(){\n    const gui=this.gui=new GUI({autoPlace:false, width:260,hideable:true});\n\n    const cameraFolder=gui.addFolder('Camera');\n    cameraFolder.add(this.camera.position,'z',0,10);\n    cameraFolder.open();\n\n    const lightFolder=gui.addFolder('Lighting');\n    lightFolder.add(this.ambientLight,'intensity',0,10,1);\n    lightFolder.add(this.renderer,'toneMappingExposure',-10,10,0.01)\n    lightFolder.addColor(this.directionalLight,'color');\n\n    const guiWrap:any = document.getElementById('gui-wrap');\n    guiWrap.appendChild(gui.domElement);\n    gui.open();\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "#gui-wrap {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    z-index: 1;\r\n}\r\n\r\n.gui-wrap > .main {\r\n    pointer-events: all;\r\n    max-height: 100%;\r\n    overflow: auto;\r\n  }\r\n\r\n#testRef {\r\n    width: 100%;\r\n    height: 100%;\r\n    flex-grow: 1;\r\n    flex-shrink: 1;\r\n    position: absolute;\r\n    top: 0;\r\n    z-index: 0;\r\n}",
+                    "styleUrl": "./test.component.css"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit",
+                "AfterViewInit"
+            ],
+            "accessors": {
+                "canvas": {
+                    "name": "canvas",
+                    "getSignature": {
+                        "name": "canvas",
+                        "type": "",
+                        "returnType": "HTMLCanvasElement",
+                        "line": 149
+                    }
+                }
+            },
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "TestComponent-1",
+            "templateData": "<div>\n    <div id=\"gui-wrap\" calss=\"gui-wrap\"></div>\n    <canvas #testRef id=\"testRef\"></canvas>\n</div>"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-6ff56e6d7bca9896b32982c3f67f36abd5c4225a9a8d572fe617e54c14c4f2fcf037c17e313909db87b38248d435aca0385465ca13509a1f7465cde35a975190",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { MatDialogModule, MatDialogRef } from '@angular/material/dialog';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { CubeComponent } from './cube/cube.component';\nimport { ModelComponent } from './model/model.component';\nimport { TestComponent } from './test/test.component';\nimport { ModelDialogComponent } from './model-dialog/model-dialog.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    CubeComponent,\n    ModelComponent,\n    TestComponent,\n    ModelDialogComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    MatDialogModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent],\n  entryComponents:[TestComponent,ModelDialogComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "CubeComponent"
+                        },
+                        {
+                            "name": "ModelComponent"
+                        },
+                        {
+                            "name": "ModelDialogComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-241d569a5b87e1560cdd48e685d0316eae57a73f3da575892828481534523e9c5e345d85efa77a8f3f7fe23b52cfd1621b014c950626eb2371e612e014b49d5f",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport {CubeComponent} from './cube/cube.component';\nimport { ModelComponent } from './model/model.component';\nimport { TestComponent } from './test/test.component';\nimport { ModelDialogComponent } from './model-dialog/model-dialog.component';\n\nconst routes: Routes = [\n  {\n    path:\"cube\", component:CubeComponent\n  },\n  {\n    path:\"model\", component:ModelComponent\n  },\n  {\n    path:\"test\", component:TestComponent\n  },\n  {path:\"mdc\",component:ModelDialogComponent}\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Button>",
+                "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Page>",
+                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Header>",
+                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Button>",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 177
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Page>",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 177
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Header>",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 177
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Button>",
+                    "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Page>",
+                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Button>",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 177
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Page>",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 177
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Header>",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 177
+                }
+            ]
+        }
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "cube",
+                        "component": "CubeComponent"
+                    },
+                    {
+                        "path": "model",
+                        "component": "ModelComponent"
+                    },
+                    {
+                        "path": "test",
+                        "component": "TestComponent"
+                    },
+                    {
+                        "path": "mdc",
+                        "component": "ModelDialogComponent"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 5,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/cube/cube.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CubeComponent",
+                "coveragePercent": 11,
+                "coverageCount": "3/26",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/example/example.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ExampleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/model-dialog/model-dialog.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ModelDialogComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/model/model.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ModelComponent",
+                "coveragePercent": 15,
+                "coverageCount": "4/26",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/test/test.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TestComponent",
+                "coveragePercent": 11,
+                "coverageCount": "4/35",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/test/working.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TestComponent",
+                "coveragePercent": 13,
+                "coverageCount": "4/29",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            }
+        ]
+    }
+}
